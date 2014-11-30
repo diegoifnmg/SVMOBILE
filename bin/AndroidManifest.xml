@@ -50,6 +50,10 @@
             android:name="com.example.br.com.diegoalvescosta.svmobile.CaixaActivity"
             android:label="Caixa" >
         </activity>
+        <activity
+            android:name="com.example.br.com.diegoalvescosta.svmobile.CaixaListagemActivity"
+            android:label="@string/title_activity_caixa_listagem" >
+        </activity>
     </application>
 
 </manifest>

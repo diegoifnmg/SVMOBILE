@@ -11,5 +11,6 @@
     <string name="title_activity_produto_listagem">ProdutoListagemActivity</string>
     <string name="title_activity_vendas_listagem">VendasListagemActivity</string>
     <string name="title_activity_caixa">CaixaActivity</string>
+    <string name="title_activity_caixa_listagem">CaixaListagemActivity</string>
 
 </resources>

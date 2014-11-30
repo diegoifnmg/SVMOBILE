@@ -35,5 +35,12 @@ public class PrincipalActivity extends Activity {
 	
 	}
 	
+	public void Caixa(View view){
+		
+		Intent intentNovaTela = new Intent(this, CaixaListagemActivity.class);
+		this.startActivity(intentNovaTela);
+	
+	}
+	
 
 }

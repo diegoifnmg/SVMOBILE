@@ -48,7 +48,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="60dp"
-        android:text="Caixa" />
+        android:text="Caixa"
+        android:onClick="Caixa" />
 
     <Button
         android:id="@+id/btnParcelas"

@@ -11,6 +11,7 @@ public class BDUtil extends SQLiteOpenHelper{
 
 	private static final String TABELA_PRODUTO = "PRODUTO";
 	private static final String TABELA_CLIENTE = "CLIENTE";
+	private static final String TABELA_CAIXA = "CAIXA";
 
 	// Construtor.........................................................
 	public BDUtil(Context context) {
@@ -42,14 +43,15 @@ public class BDUtil extends SQLiteOpenHelper{
 
 		db.execSQL(ddlCliente);
 		
+		String ddlCaixa = "CREATE TABLE " + TABELA_CAIXA
+				+ "(codigo INTEGER PRIMARY KEY AUTOINCREMENT, "
+				+ "saldo DOUBLE, "
+				+ "data, DATE)";
+
+		db.execSQL(ddlCaixa);
+		
 	}
 		
-		
-		
-	
-	
-	
-	
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
