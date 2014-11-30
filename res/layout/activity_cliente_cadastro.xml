@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ClienteCadastroActivity" >
+
+    <TextView
+        android:id="@+id/lblCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblNomeCliente"
+        android:layout_below="@+id/lblNomeCliente"
+        android:layout_marginTop="38dp"
+        android:text="CPF:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/lblTelefoneCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblCPF"
+        android:layout_below="@+id/lblCPF"
+        android:layout_marginTop="46dp"
+        android:text="Telefone:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/edtTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lblTelefoneCliente"
+        android:layout_toRightOf="@+id/lblTelefoneCliente"
+        android:ems="10"
+        android:inputType="phone" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lblCPF"
+        android:layout_alignRight="@+id/btnSalvarCliente"
+        android:layout_toRightOf="@+id/lblCPF"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/edtNomeCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lblCPF"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/lblNomeCliente"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/lblNomeCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnSalvarCliente"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="34dp"
+        android:text="Nome:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnSalvarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="75dp"
+        android:text="Salvar" 
+        android:onClick="Salvar"/>
+
+</RelativeLayout>

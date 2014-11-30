@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">br.com.diegoalvescosta.svmobile</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_produto_cadastro">ProdutoCadastroActivity</string>
+    <string name="title_activity_cliente_cadastro">ClienteCadastroActivity</string>
+    <string name="title_activity_vendas">VendasActivity</string>
+    <string name="title_activity_cliente_listagem">ClienteListagemActivity</string>
+    <string name="title_activity_produto_listagem">ProdutoListagemActivity</string>
+    <string name="title_activity_vendas_listagem">VendasListagemActivity</string>
+    <string name="title_activity_caixa">CaixaActivity</string>
+
+</resources>

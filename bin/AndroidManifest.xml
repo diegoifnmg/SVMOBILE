@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.br.com.diegoalvescosta.svmobile"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.br.com.diegoalvescosta.svmobile.PrincipalActivity"
+            android:label="SVMOBILE" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.br.com.diegoalvescosta.svmobile.ProdutoCadastroActivity"
+            android:label="@string/title_activity_produto_cadastro" >
+        </activity>
+        <activity
+            android:name="com.example.br.com.diegoalvescosta.svmobile.ClienteCadastroActivity"
+            android:label="@string/title_activity_cliente_cadastro" >
+        </activity>
+        <activity
+            android:name="com.example.br.com.diegoalvescosta.svmobile.VendasActivity"
+            android:label="@string/title_activity_vendas" >
+        </activity>
+        <activity
+            android:name="com.example.br.com.diegoalvescosta.svmobile.ClienteListagemActivity"
+            android:label="@string/title_activity_cliente_listagem" >
+        </activity>
+        <activity
+            android:name="com.example.br.com.diegoalvescosta.svmobile.ProdutoListagemActivity"
+            android:label="@string/title_activity_produto_listagem" >
+        </activity>
+        <activity
+            android:name="com.example.br.com.diegoalvescosta.svmobile.VendasListagemActivity"
+            android:label="@string/title_activity_vendas_listagem" >
+        </activity>
+        <activity
+            android:name="com.example.br.com.diegoalvescosta.svmobile.CaixaActivity"
+            android:label="Caixa" >
+        </activity>
+    </application>
+
+</manifest>

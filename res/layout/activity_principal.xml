@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PrincipalActivity" >
+
+    <Button
+        android:id="@+id/btnProdutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="38dp"
+        android:text="Produtos"
+        android:onClick="Produto" />
+
+    <Button
+        android:id="@+id/btnClientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnProdutos"
+        android:layout_alignRight="@+id/btnProdutos"
+        android:layout_below="@+id/btnProdutos"
+        android:layout_marginTop="17dp"
+        android:text="Clientes"
+        android:onClick="Cliente" />
+
+    <Button
+        android:id="@+id/btnVendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnClientes"
+        android:layout_alignRight="@+id/btnClientes"
+        android:layout_below="@+id/btnClientes"
+        android:layout_marginTop="20dp"
+        android:text="Vendas" />
+
+    <Button
+        android:id="@+id/btnCaixa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnVendas"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:text="Caixa" />
+
+    <Button
+        android:id="@+id/btnParcelas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnVendas"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnVendas"
+        android:layout_marginTop="24dp"
+        android:text="Parcelas" />
+
+</RelativeLayout>
