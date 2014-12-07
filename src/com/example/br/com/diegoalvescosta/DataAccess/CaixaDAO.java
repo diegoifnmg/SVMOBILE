@@ -51,7 +51,7 @@ public class CaixaDAO {
 				null,		// Parametros WHERE
 				null,		// Group para agrupar
 				null,		// Usando Haven
-				"DATA"		// Ordenando pelo nome
+				"CODIGO"		// Ordenando pelo nome
 				);
 		
 		List<Caixa> listaCaixas = new ArrayList<Caixa>();

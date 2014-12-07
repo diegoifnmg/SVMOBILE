@@ -50,6 +50,12 @@ public class ItemVenda {
 	public void setProduto(Produto produto) {
 		this.produto = produto;
 	}
+	
+	public double getValorTotalItem() 
+    {
+        double total =  getQuantidade() * produto.getPreco();
+        return total;
+    }
 
 	@Override
 	public int hashCode() {

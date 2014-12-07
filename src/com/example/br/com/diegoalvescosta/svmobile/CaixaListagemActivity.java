@@ -11,8 +11,10 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import br.com.diegoalvescosta.svmobile.DomainModel.Caixa;
+import br.com.diegoalvescosta.svmobile.DomainModel.Produto;
 
 import com.example.br.com.diegoalvescosta.DataAccess.CaixaDAO;
+import com.example.br.com.diegoalvescosta.DataAccess.ProdutoDAO;
 
 public class CaixaListagemActivity extends Activity {
 
@@ -22,24 +24,24 @@ public class CaixaListagemActivity extends Activity {
 		setContentView(R.layout.activity_caixa_listagem);
 		
 		//Carregar List view
-				ListView lstCaixas = (ListView) this.findViewById(R.id.lstCaixaListagem);
-				
-				CaixaDAO caixaDAO = new CaixaDAO(this);
-				List<Caixa> listaCaixas = null;
-				try {
-					listaCaixas = caixaDAO.obterTodos();
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				ArrayAdapter<Caixa> adapter = new ArrayAdapter<Caixa>
-				(   this,
-					android.R.layout.simple_list_item_1,
-					listaCaixas
-				);
-				lstCaixas.setAdapter(adapter);
+		ListView lstCaixas = (ListView) this.findViewById(R.id.lstCaixaListagem);
 		
+		CaixaDAO caixaDAO = new CaixaDAO(this);
+		List<Caixa> listaCaixas = null;
+		try {
+			listaCaixas = caixaDAO.obterTodos();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		ArrayAdapter<Caixa> adapter = new ArrayAdapter<Caixa>
+		(   this,
+			android.R.layout.simple_list_item_1,
+			listaCaixas
+		);
+		lstCaixas.setAdapter(adapter);
+
 	}
 
 	@Override
