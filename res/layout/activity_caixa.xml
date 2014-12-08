@@ -18,27 +18,23 @@
         android:text="Saldo"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:inputType="numberDecimal" >
-
-        <requestFocus />
-    </EditText>
-
     <Button
-        android:id="@+id/btnParcelas"
+        android:id="@+id/btnShowNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="73dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
         android:text="Fechar Caixa" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="R$ 150"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

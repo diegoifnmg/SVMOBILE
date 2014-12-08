@@ -20,17 +20,6 @@
         android:onClick="Produto" />
 
     <Button
-        android:id="@+id/btnClientes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnProdutos"
-        android:layout_alignRight="@+id/btnProdutos"
-        android:layout_below="@+id/btnProdutos"
-        android:layout_marginTop="17dp"
-        android:text="Clientes"
-        android:onClick="Cliente" />
-
-    <Button
         android:id="@+id/btnVendas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,24 +31,69 @@
         android:text="Vendas" />
 
     <Button
+        android:id="@+id/btnClientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnProdutos"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnProdutos"
+        android:onClick="Cliente"
+        android:text="Clientes" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnClientes" />
+
+    <Button
         android:id="@+id/btnCaixa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnVendas"
+        android:layout_alignLeft="@+id/btnCancelNotification"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="60dp"
-        android:text="Caixa"
-        android:onClick="Caixa" />
+        android:layout_alignRight="@+id/progressBar3"
+        android:onClick="Caixa"
+        android:text="Caixa" />
 
-    <Button
-        android:id="@+id/btnParcelas"
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btnVendas"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/btnVendas"
-        android:layout_marginTop="24dp"
-        android:text="Parcelas" />
+        android:layout_below="@+id/btnVendas" />
+
+    <Button
+        android:id="@+id/btnShowNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/progressBar2"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/progressBar2"
+        android:layout_marginTop="14dp"
+        android:text="Parcelas em atraso" />
+
+    <Button
+        android:id="@+id/btnCancelNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnShowNotification"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnShowNotification"
+        android:text="Apagar Notification" />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnCancelNotification"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnCancelNotification" />
 
 </RelativeLayout>

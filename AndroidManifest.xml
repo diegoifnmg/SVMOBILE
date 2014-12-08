@@ -24,11 +24,11 @@
         </activity>
         <activity
             android:name="com.example.br.com.diegoalvescosta.svmobile.ProdutoCadastroActivity"
-            android:label="@string/title_activity_produto_cadastro" >
+            android:label="Cadastro de Produtos" >
         </activity>
         <activity
             android:name="com.example.br.com.diegoalvescosta.svmobile.ClienteCadastroActivity"
-            android:label="@string/title_activity_cliente_cadastro" >
+            android:label="Cadastro de Clientes" >
         </activity>
         <activity
             android:name="com.example.br.com.diegoalvescosta.svmobile.VendasActivity"
@@ -36,11 +36,11 @@
         </activity>
         <activity
             android:name="com.example.br.com.diegoalvescosta.svmobile.ClienteListagemActivity"
-            android:label="@string/title_activity_cliente_listagem" >
+            android:label="Listagem de Clientes" >
         </activity>
         <activity
             android:name="com.example.br.com.diegoalvescosta.svmobile.ProdutoListagemActivity"
-            android:label="@string/title_activity_produto_listagem" >
+            android:label="Listagem de Produtos" >
         </activity>
         <activity
             android:name="com.example.br.com.diegoalvescosta.svmobile.VendasListagemActivity"
@@ -53,6 +53,10 @@
         <activity
             android:name="com.example.br.com.diegoalvescosta.svmobile.CaixaListagemActivity"
             android:label="@string/title_activity_caixa_listagem" >
+        </activity>
+        <activity
+            android:name="com.example.br.com.diegoalvescosta.svmobile.ParcelasActivity"
+            android:label="Parcelas" >
         </activity>
     </application>
 

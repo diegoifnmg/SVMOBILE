@@ -19,7 +19,9 @@ import br.com.diegoalvescosta.svmobile.DomainModel.Produto;
 import br.com.diegoalvescosta.svmobile.DomainModel.Venda;
 
 import com.example.br.com.diegoalvescosta.DataAccess.ClienteDAO;
+import com.example.br.com.diegoalvescosta.DataAccess.ItemVendaDAO;
 import com.example.br.com.diegoalvescosta.DataAccess.ProdutoDAO;
+import com.example.br.com.diegoalvescosta.DataAccess.VendaDAO;
 
 public class VendasActivity extends Activity {
 
@@ -76,29 +78,43 @@ public class VendasActivity extends Activity {
 	
 	public void Vender(View view){
 		String nomeCliente = String.valueOf(spinner1.getSelectedItem());		
+		VendaDAO vendaDAO = new VendaDAO(this);
+		ItemVendaDAO itemDAO  =new ItemVendaDAO(this);
+		ClienteDAO clienteDAO = new ClienteDAO(this);
+		
+		int idVenda = 0;
 		
 		for(Cliente c : clientes){
 			if(c.getNome().equals(nomeCliente)){
+				
+				c.setCodigo(clienteDAO.retornaIDPeloNome(c.getNome()));
 				venda.setCliente(c);
 				break;
 			}
 		}
 		
 		EditText edtNumParcelas = (EditText) this.findViewById(R.id.edtNumParcelas);
-		String strNumParcelas = edtNumParcelas.getText().toString().trim();
 		
-		venda.setNumParcelas(Integer.parseInt(strNumParcelas));
+		venda.setNumParcelas(Integer.parseInt(edtNumParcelas.getText().toString()));	
+		vendaDAO.inserir(venda);
 		
+		idVenda = vendaDAO.retornaUltimoID();
+		venda.setCodigo(idVenda);
 		
+		for(ItemVenda i : itens){
+			i.setVenda(venda);	
+			itemDAO.inserir(i);
+		}
 		
-		
-		
-		//Toast toast = Toast.makeText(this, venda.getCliente().getNome(), Toast.LENGTH_LONG);
-		//toast.show();
+		Toast toast = Toast.makeText(this, "Venda Cadastrada com Sucesso!", Toast.LENGTH_LONG);
+		toast.show();
 	}
 	
 	public void AdicionarProduto(View view){
 		String nomeProduto = String.valueOf(spProduto.getSelectedItem());
+		EditText edQtde = (EditText) findViewById(R.id.edtQTD);
+		ProdutoDAO produtoDAO = new ProdutoDAO(this);
+		
 		ItemVenda item = new ItemVenda();
 		boolean verificaProduto = false;
 		
@@ -107,8 +123,9 @@ public class VendasActivity extends Activity {
 		
 		for(Produto p : produtos){
 			if(p.getNome().equals(nomeProduto)){
+				p.setCodigo(produtoDAO.retornaIDPeloNome(p.getNome()));
 				item.setProduto(p);
-				item.setQuantidade(1);			
+				item.setQuantidade(Integer.parseInt(edQtde.getText().toString()));			
 			}
 		}		
 		

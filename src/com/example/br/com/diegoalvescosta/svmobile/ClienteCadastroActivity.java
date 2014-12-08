@@ -1,6 +1,7 @@
 package com.example.br.com.diegoalvescosta.svmobile;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -55,6 +56,9 @@ public class ClienteCadastroActivity extends Activity {
 			edtNome.setText("");
 			edtCPF.setText("");
 			edtTelefone.setText("");
+			
+			Intent intentNovaTela = new Intent(this, PrincipalActivity.class);
+			this.startActivity(intentNovaTela);
 		}
 		
 		
