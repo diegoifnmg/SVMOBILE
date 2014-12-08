@@ -24,11 +24,12 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_caixa=0x7f08001d;
-        public static final int action_novo_caixa=0x7f08001e;
-        public static final int action_novo_cliente=0x7f080020;
-        public static final int action_novo_produto=0x7f080021;
-        public static final int action_settings=0x7f08001f;
+        public static final int action_caixa=0x7f080023;
+        public static final int action_novo_caixa=0x7f080024;
+        public static final int action_novo_cliente=0x7f080026;
+        public static final int action_novo_produto=0x7f080027;
+        public static final int action_settings=0x7f080025;
+        public static final int btnAdicionarProduto=0x7f08001d;
         public static final int btnCaixa=0x7f08000f;
         public static final int btnClientes=0x7f08000d;
         public static final int btnParcelas=0x7f080002;
@@ -37,27 +38,32 @@ public final class R {
         public static final int btnSalvarCliente=0x7f080009;
         public static final int btnVendas=0x7f08000e;
         public static final int editText1=0x7f080001;
-        public static final int editText2=0x7f08001b;
         public static final int edtCPF=0x7f080008;
         public static final int edtNomeCliente=0x7f08000a;
+        public static final int edtNumParcelas=0x7f08001b;
         public static final int edtPreco=0x7f080015;
+        public static final int edtQTD=0x7f080022;
         public static final int edtQuantidadeProduto=0x7f080012;
         public static final int edtTelefone=0x7f080007;
         public static final int lblCPF=0x7f080004;
         public static final int lblNomeCliente=0x7f080005;
         public static final int lblNomeProduto=0x7f080011;
         public static final int lblPreco=0x7f080013;
+        public static final int lblQTD=0x7f080021;
         public static final int lblQuantidadeProduto=0x7f080014;
         public static final int lblTelefoneCliente=0x7f080006;
         public static final int lstCaixaListagem=0x7f080003;
         public static final int lstClienteListagem=0x7f08000b;
         public static final int lstProdutos=0x7f080017;
-        public static final int radioButton1=0x7f080018;
-        public static final int radioButton2=0x7f08001a;
+        public static final int prazo=0x7f08001e;
+        public static final int spCliente=0x7f08001a;
+        public static final int spProduto=0x7f08001f;
         public static final int textView1=0x7f080000;
         public static final int textView3=0x7f080019;
-        public static final int textView4=0x7f08001c;
+        public static final int textView4=0x7f080020;
         public static final int txtNomeProduto=0x7f080010;
+        public static final int txtProduto=0x7f08001c;
+        public static final int vista=0x7f080018;
     }
     public static final class layout {
         public static final int activity_caixa=0x7f030000;

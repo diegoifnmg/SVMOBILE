@@ -56,6 +56,8 @@ public class ItemVenda {
         double total =  getQuantidade() * produto.getPreco();
         return total;
     }
+	
+	
 
 	@Override
 	public int hashCode() {
@@ -96,8 +98,7 @@ public class ItemVenda {
 
 	@Override
 	public String toString() {
-		return "ItemVenda [codigo=" + codigo + ", quantidade=" + quantidade
-				+ ", venda=" + venda + ", produto=" + produto + "]";
+		return this.produto.getNome() + " - R$ " + this.produto.getPreco();
 	}
 	
     

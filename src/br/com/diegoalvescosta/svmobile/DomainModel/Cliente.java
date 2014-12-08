@@ -99,7 +99,7 @@ public class Cliente {
 	
 	@Override
 	public String toString() {
-		return Nome + ", Tel. " + Telefone;
+		return this.Nome;
 	}
 	
 	

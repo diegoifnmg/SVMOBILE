@@ -42,5 +42,10 @@ public class PrincipalActivity extends Activity {
 	
 	}
 	
+	public void Venda(View view){
+		Intent intentNovaTela = new Intent(this, VendasActivity.class);
+		this.startActivity(intentNovaTela);
+	}
+	
 
 }

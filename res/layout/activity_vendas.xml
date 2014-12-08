@@ -15,34 +15,18 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
+        android:onClick="Vender"
         android:text="Venda" />
-
+	
     <RadioButton
-        android:id="@+id/radioButton1"
+        android:id="@+id/vista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
         android:layout_toRightOf="@+id/textView3"
-        android:text="À vista" />
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioButton1"
-        android:layout_below="@+id/textView3"
-        android:text="À prazo" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignRight="@+id/textView4"
-        android:layout_below="@+id/radioButton1"
-        android:ems="10"
-        android:inputType="number" />
+        android:text="À vista" 
+        android:onClick="checkRadio"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -63,13 +47,99 @@
         android:text="Cliente:"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
+    <Spinner
+        android:id="@+id/spCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView1"
+        android:layout_toLeftOf="@+id/edtNumParcelas"
+        android:layout_toRightOf="@+id/textView1" />
+
+    <ListView
+        android:id="@+id/lstProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnParcelas"
+        android:layout_alignLeft="@+id/txtProduto"
+        android:layout_below="@+id/btnAdicionarProduto" >
+
+    </ListView>
+
+    <RadioButton
+        android:id="@+id/prazo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vista"
+        android:layout_below="@+id/vista"
+        android:onClick="checkRadio"
+        android:text="À prazo" />
+
+    <TextView
+        android:id="@+id/txtProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/prazo"
+        android:text="Produto:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtProduto"
+        android:layout_toLeftOf="@+id/btnAdicionarProduto"
+        android:layout_toRightOf="@+id/txtProduto" />
+
+    <EditText
+        android:id="@+id/edtNumParcelas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/vista"
+        android:layout_alignLeft="@+id/textView4"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/radioButton1"
-        android:layout_alignRight="@+id/btnParcelas"
+        android:layout_above="@+id/edtNumParcelas"
+        android:layout_alignRight="@+id/lstProdutos"
         android:text="Nº Parcelas"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnAdicionarProduto"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/lstProdutos"
+        android:layout_centerVertical="true"
+        android:onClick="AdicionarProduto"
+        android:text="Add" />
+
+    <TextView
+        android:id="@+id/lblQTD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnAdicionarProduto"
+        android:layout_alignBottom="@+id/btnAdicionarProduto"
+        android:layout_toLeftOf="@+id/edtQTD"
+        android:text="QTD:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/edtQTD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/prazo"
+        android:layout_alignRight="@+id/vista"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="number" />
 
 </RelativeLayout>

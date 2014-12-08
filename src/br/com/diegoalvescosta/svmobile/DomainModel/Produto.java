@@ -119,7 +119,7 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return  nome + ", Estoque=" + QTD + ", Preco=" + preco;
+		return  this.nome;
 	}
 
 	

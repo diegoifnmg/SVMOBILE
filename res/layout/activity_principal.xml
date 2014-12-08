@@ -38,6 +38,7 @@
         android:layout_alignRight="@+id/btnClientes"
         android:layout_below="@+id/btnClientes"
         android:layout_marginTop="20dp"
+        android:onClick="Venda"
         android:text="Vendas" />
 
     <Button
